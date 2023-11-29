@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="369.0" prefWidth="513.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.imobiliaria.view.JFXImobiliaria">
+   <children>
+      <Label layoutX="56.0" layoutY="67.0" text="Proprietário" />
+      <Label layoutX="56.0" layoutY="149.0" text="Cidade" />
+      <Label layoutX="56.0" layoutY="226.0" prefHeight="17.0" prefWidth="106.0" text="Área do Imóvel" />
+      <TextField fx:id="tfProprietario" layoutX="56.0" layoutY="99.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="tfCidade" layoutX="56.0" layoutY="175.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="tfArea" layoutX="56.0" layoutY="256.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="307.0" layoutY="67.0" text="Calcular área do terreno" />
+      <Button fx:id="bQuadrado" layoutX="307.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: green;" text="Quadrado" />
+      <Button fx:id="bRetangulo" layoutX="307.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: green;" text="Retângulo" />
+      <Button fx:id="bTriangulo" layoutX="307.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: green;" text="Triângulo" />
+      <Button fx:id="bLosango" layoutX="307.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: green;" text="Losângo" />
+      <Button fx:id="bCirculo" layoutX="307.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: green;" text="Círculo" />
+      <Button fx:id="bSalvar" layoutX="56.0" layoutY="308.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" style="-fx-background-color: black;" text="Salvar" textFill="#eeeeee" />
+      <Button fx:id="bFechar" layoutX="271.0" layoutY="308.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" style="-fx-background-color: black;" text="Fechar" textFill="WHITE" />
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="53.0" prefWidth="513.0" style="-fx-background-color: gray;" text="Imobiliária" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
