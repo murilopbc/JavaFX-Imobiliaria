@@ -21,7 +21,9 @@ public class JFXImobiliaria {
     Imovel imovel = new Imovel();
 
     public void calcularAreaQuadrado() {
-        Double lado;
+
+        double lado;
+
         while (true) {
             try {
                 lado = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do lado do Quadrado: "));
@@ -30,9 +32,15 @@ public class JFXImobiliaria {
                 JOptionPane.showMessageDialog(null, "Valor Inválido!Digite um número");
             }
         }
+
+        imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaQuadrado(lado))));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
     }
+
     public void calcularAreaRetangulo() {
-        Double lado, altura;
+
+        double lado, altura;
+
         while (true) {
             try {
                 lado = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do lado do Retângulo: "));
@@ -42,10 +50,15 @@ public class JFXImobiliaria {
                 JOptionPane.showMessageDialog(null, "Valor Inválido!Digite um número");
             }
         }
+
+        imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaRetangulo(lado, altura))));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
     }
 
     public void calcularAreaTriangulo(){
-        Double base, altura;
+
+        double base, altura;
+
         while (true){
             try{
                 base = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da base do Triângulo"));
@@ -55,9 +68,15 @@ public class JFXImobiliaria {
                 JOptionPane.showMessageDialog(null, "Valor Inválido!Digite um número");
             }
         }
+
+        imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaTriangulo(base, altura))));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
     }
+
     public void calcularAreaCirculo(){
-        Double raio;
+
+        double raio;
+
         while (true){
             try {
                 raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do raio do Círculo: "));
@@ -66,9 +85,15 @@ public class JFXImobiliaria {
                 JOptionPane.showMessageDialog(null, "Valor Inválido!Digite um número");
             }
         }
+
+        imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaCirculo(raio))));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
     }
+
     public void calcularAreaLosango(){
-        Double dMenor, dMaior;
+
+        double dMenor, dMaior;
+
         while (true) {
             try {
                 dMenor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da diagonal menor do Losângo"));
@@ -78,10 +103,15 @@ public class JFXImobiliaria {
                 JOptionPane.showMessageDialog(null, "Valor Inválido!Digite um número");
             }
         }
+
+        imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaLosango(dMenor, dMaior))));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
     }
+
     public void salvar() {
 
     }
+
     public void fechar() {
         System.exit(0);
     }
