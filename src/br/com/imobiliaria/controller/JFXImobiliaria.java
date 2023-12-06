@@ -34,7 +34,7 @@ public class JFXImobiliaria {
         }
 
         imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaQuadrado(lado))));
-        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno()));
     }
 
     public void calcularAreaRetangulo() {
@@ -52,7 +52,7 @@ public class JFXImobiliaria {
         }
 
         imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaRetangulo(lado, altura))));
-        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno()));
     }
 
     public void calcularAreaTriangulo(){
@@ -70,7 +70,7 @@ public class JFXImobiliaria {
         }
 
         imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaTriangulo(base, altura))));
-        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno()));
     }
 
     public void calcularAreaCirculo(){
@@ -87,7 +87,7 @@ public class JFXImobiliaria {
         }
 
         imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaCirculo(raio))));
-        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno()));
     }
 
     public void calcularAreaLosango(){
@@ -105,12 +105,31 @@ public class JFXImobiliaria {
         }
 
         imovel.setAreaTerreno(String.valueOf((calculos.calcularAreaLosango(dMenor, dMaior))));
-        tfArea.setText(String.valueOf(imovel.getAreaTerreno));
+        tfArea.setText(String.valueOf(imovel.getAreaTerreno()));
     }
 
-    public void salvar() {
+        public void salvar() {
 
-    }
+            if (tfProprietario.getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "Não é possivel salvar sem a entrada de dados!");
+                return;
+            }
+            else if (tfCidade.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Não é possivel salvar sem a entrada de dados!");
+                return;
+            }
+            else if (tfArea.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Não é possivel salvar sem a entrada de dados!");
+                return;
+            }
+
+            imovel.setProprietario(tfProprietario.getText());
+            imovel.setCidade(tfCidade.getText());
+
+            String dados = imovel.obterDadosImovel();
+
+            JOptionPane.showMessageDialog(null, dados);
+        }
 
     public void fechar() {
         System.exit(0);
